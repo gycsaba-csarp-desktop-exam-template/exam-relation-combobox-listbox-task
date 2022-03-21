@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Vizsgaremek.Models;
+using Kreta.Models;
 
 namespace Vizsgaremek.Repositories
 {
