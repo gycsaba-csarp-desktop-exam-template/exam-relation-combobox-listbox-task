@@ -16,16 +16,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kreta
+
+namespace Kreta.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public StudentViewModel studentViewModel = new StudentViewModel();
-        private void miStudent_Click(object sender, RoutedEventArgs e)
+        StudentViewModel studentViewModel;
+
+        private void miStudents_Click(object sender, RoutedEventArgs e)
         {
+            studentViewModel = new StudentViewModel();
             StudentPage studentPage = new StudentPage(studentViewModel);
             Navigation.Navigate(studentPage);
         }

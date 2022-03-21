@@ -1,6 +1,4 @@
-﻿using Kreta.Views.Navigations;
-using Kreta.Views.Page;
-using Kreta.ViewModel;
+﻿using Kreta.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,18 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kreta
+namespace Kreta.Views.Page
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for SubjectPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SubjectPage : UserControl
     {
-        public StudentViewModel studentViewModel = new StudentViewModel();
-        private void miStudent_Click(object sender, RoutedEventArgs e)
+        private SubjectViewModel subjectViewModel;
+        public SubjectPage(SubjectViewModel subjectViewModel)
         {
-            StudentPage studentPage = new StudentPage(studentViewModel);
-            Navigation.Navigate(studentPage);
+            this.subjectViewModel = subjectViewModel;
+            InitializeComponent();
+            this.DataContext = subjectViewModel;
         }
     }
 }

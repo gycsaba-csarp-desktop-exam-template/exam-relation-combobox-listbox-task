@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Kreta.Models.Relationship;
+using Kreta.Models.Relationships;
 
 namespace Kreta.Repositories.Relationship
 {
